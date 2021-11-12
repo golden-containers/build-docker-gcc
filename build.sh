@@ -17,7 +17,7 @@ echo "LABEL ${1:-DEBUG=TRUE}" >> 11/Dockerfile
 
 # Build
 
-docker build --tag ghcr.io/golden-containers/gcc:11 11/
+docker build 11/ --tag ghcr.io/golden-containers/gcc:11 --label ${1:-DEBUG=TRUE}
 
 # Push
 
